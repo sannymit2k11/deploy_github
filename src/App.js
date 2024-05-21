@@ -47,7 +47,7 @@ function App() {
 	  setTimeout(()=>{setCopyText('Copy Text')},4000);
   }
    const toggleMode = () =>{
-	  if(myStyle.color == 'black'){
+	  if(myStyle.color === 'black'){
 		  setBtnText('Enable Light Mode');
 		  showAlert('Enable Light Mode','success');
 	      setMyStyle({
