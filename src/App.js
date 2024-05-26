@@ -29,7 +29,7 @@ function App() {
 			 message: message,
 			 type: type
 		 });
-		 setTimeout(()=>{setAlert(null)},1500);
+		 setTimeout(()=>{setAlert(null)},8000);
   }
   const [textVal,setText]  = useState('');
   const [btnText,setBtnText]  = useState('Enable Dark Mode');
@@ -44,7 +44,7 @@ function App() {
 	  navigator.clipboard.writeText(text.value);
 	  setCopyText('copied');
 	  showAlert('Copied','success');
-	  setTimeout(()=>{setCopyText('Copy Text')},4000);
+	  setTimeout(()=>{setCopyText('Copy Text')},8000);
   }
    const toggleMode = () =>{
 	  if(myStyle.color === 'black'){
@@ -75,8 +75,8 @@ function App() {
 	<textarea className="form-control mb-2" id="myText" value={textVal} rows="8" onChange={handleChange} ></textarea>
 	<button className="btn btn-primary btn-md me-2" onClick={handleUpdate}>Convert to upper case</button>
 	<button className="btn btn-primary btn-md me-2" onClick={handleUpdateToLower}>Convert to lowerCase case</button>
-	<button className="btn btn-primary btn-md" onClick={clearText}>ClearText</button>
-	<button className="btn btn-primary btn-md" onClick={toggleMode}>{btnText}</button>
+	<button className="btn btn-primary btn-md me-2" onClick={clearText}>ClearText</button>
+	<button className="btn btn-primary btn-md me-2" onClick={toggleMode}>{btnText}</button>
 	<button className="btn btn-primary btn-md" onClick={copyTextHandler}>{copyText}</button>
 	</div>
 	<div className="container" style={myStyle}>
